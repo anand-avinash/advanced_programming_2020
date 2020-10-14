@@ -334,3 +334,9 @@
   In both cases, the loop starts with evaluating the condition, then executing the body, and then it repeats.
 
 ## Getters
+
+`while(!(std::cin >> i))` repeatedly takes input from `stdin` until it encounters an object of type same as that of `i`. See `getters_int.cpp` and `getters_double.cpp`.
+
+## Units of measure
+
+The program accepts lengths in units inch, foot and yard, and converts them to mm, cm and m. See `unit_convertor.cpp`.

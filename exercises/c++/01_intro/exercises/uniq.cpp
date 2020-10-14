@@ -1,6 +1,16 @@
+// Write a simple version of the Unix program uniq -c, which, when fed with a text, outputs the same text with consecutive identical lines collapsed into one prepended with the number of repetitions.
+
 #include<iostream>
 #include<string>
 #include<iomanip>
+
+void print_line(int& count, std::string& str){
+  if(str=="\n"){
+    std::cout<<std::setw(7)<<count<<std::endl;
+  } else {
+    std::cout<<std::setw(7)<<count<<" "<<str<<std::endl;
+  }//if
+}//print_line
 
 int main(){
   std::string prev_line {"\0"}, cur_line;
@@ -16,11 +26,7 @@ int main(){
     // To be able to work with empty lines, I am assigning the empty lines the value `\n`
     if(cur_line!=prev_line){
       if(prev_line!="\0"){ // To avoid printing artificially intialized variable
-        if(prev_line=="\n"){
-          std::cout<<std::setw(7)<<count<<std::endl;
-        } else {
-          std::cout<<std::setw(7)<<count<<" "<<prev_line<<std::endl;
-        }//if
+        print_line(count, prev_line);
       }//if
       prev_line=cur_line;
       count=1;
@@ -29,6 +35,6 @@ int main(){
     count++;    
   }//for_or_while
 
-  std::cout<<std::setw(7)<<count<<" "<<prev_line<<std::endl;
+  print_line(count, prev_line);
   return 0;
 }//main
