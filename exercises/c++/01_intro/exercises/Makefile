@@ -1,5 +1,5 @@
 CC = g++
-EXE = uniq.x getters_int.x getters_double.x unit_convertor.x
+EXE = uniq.x getters_int.x getters_double.x unit_convertor.x text_format.x
 
 .PHONY: default clean
 

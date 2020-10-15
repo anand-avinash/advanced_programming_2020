@@ -340,3 +340,7 @@
 ## Units of measure
 
 The program accepts lengths in units inch, foot and yard, and converts them to mm, cm and m. See `unit_convertor.cpp`.
+
+## Text formatter
+
+The program is little bit complicated as I tried to preserve all the blank lines and I was willing to use only `iostream` and `string` libraries. The `stdout` from the program has a `space` character at the end of every non-empty line. This `space` character is not considered for keeping lines under character limit, so that's fine. See `text_format.cpp`.
